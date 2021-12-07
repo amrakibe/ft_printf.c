@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amrakibe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/06 13:18:08 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/06 22:54:19 by amrakibe         ###   ########.fr       */
+/*   Created: 2021/12/07 13:49:58 by amrakibe          #+#    #+#             */
+/*   Updated: 2021/12/07 13:53:53 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *str)
+int	ft_strlen(char *s)
 {
 	int	i;
 
 	i = 0;
-	if (!str)
-	{
-		write(1, "(NULL)", 6);
-		return (6);
-	}
-	while (str[i])
-	{
-		ft_putchar(str[i++]);
-	}
+	while (s[i])
+		i++;
 	return (i);
 }

@@ -1,50 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_base_ptr.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/06 12:58:41 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/06 21:28:46 by amrakibe         ###   ########.fr       */
+/*   Created: 2021/12/07 13:48:50 by amrakibe          #+#    #+#             */
+/*   Updated: 2021/12/07 13:55:44 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	contsize(int nember)
+static int	calculate_length_ptr(unsigned long nb)
 {
 	int	i;
 
 	i = 0;
-	if (nember < 0)
+	if (nb == 0)
 		i++;
-	while (nember != 0)
+	while (nb > 0)
 	{
-		nember /= 10;
 		i++;
+		nb /= 16;
 	}
 	return (i);
 }
 
-int	ft_putnbr(int nb)
+int	ft_putnbr_base_ptr(unsigned long nb, char *base)
 {
-	long	n;
-
-	n = (long)nb;
-	if (n < 0)
+	if (nb <= (unsigned long)ft_strlen(base) - 1)
 	{
-		ft_putchar('-');
-		n = nb * -1;
-	}
-	if (n < 10)
-	{
-		ft_putchar(n + 48);
+		ft_putchar(base[nb]);
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr_base(nb / 16, base);
+		ft_putnbr_base(nb % 16, base);
 	}
-	return (contsize(nb));
+	return (calculate_length_ptr(nb));
 }
+int main()
+{
+	printf("\n%d", ft_putnbr_base_ptr(12, "h"));
+}
+
