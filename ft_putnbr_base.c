@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amrakibe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 18:17:44 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/06 21:31:33 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/08 00:32:06 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,8 @@ int	ft_putnbr_base(long nb, char *base)
 	}
 	return (base_size(nb));
 }
+/*
+int main()
+{
+	printf("\n%d\n", ft_putnbr_base(23, lowercase));
+}*/

@@ -6,13 +6,13 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 12:58:41 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/06 21:28:46 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/08 23:40:24 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	contsize(int nember)
+static int	contsize(int nember)
 {
 	int	i;
 

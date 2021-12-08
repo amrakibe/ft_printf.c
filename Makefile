@@ -6,15 +6,13 @@
 #    By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/06 23:29:48 by amrakibe          #+#    #+#              #
-#    Updated: 2021/12/07 00:03:10 by amrakibe         ###   ########.fr        #
+#    Updated: 2021/12/08 23:34:19 by amrakibe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-INC = ft_printf.h
-AR := ar rc
+PRINTF = ft_printf.h
 FLAGS = -Wall -Wextra -Werror
-REMOVE := rm -rf
 SRCS = 	ft_printf.c \
 		ft_putchar.c \
 		ft_putnbr_base.c \
@@ -22,21 +20,24 @@ SRCS = 	ft_printf.c \
 		ft_putnbr.c \
 		ft_putstr.c \
 		ft_strlen.c \
+		ft_ptr_base.c \
+		ft_putnbr_base_ptr.c \
 	   
-OBJS := $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
-all: $(NAME)
+$(NAME): $(OBJS) $(LIBFT)
+		ar rc $(NAME) $(OBJS)
 
-$(NAME): $(OBJS) $(INC)
-	$(AR) $@ $<
-%.o:%.c 
+%.o:%.c
 	cc $(FLAGS) -c $< -o $@
 
-
+all: $(NAME)
 clean:
-	$(REMOVE) $(OBJS)
+	rm -f $(OBJS)
 
-fclean: clean
-	$(REMOVE) $(NAME)
+fclean:	clean
+	rm -f $(NAME)
 
-re: fclean all
+re:	fclean all
+
+.PHONY: all clean fclean re 
