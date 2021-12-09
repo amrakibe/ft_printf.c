@@ -6,45 +6,47 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 12:58:41 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/08 23:40:24 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/09 01:57:27 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	contsize(int nember)
+static	int	countsize(int n)
 {
 	int	i;
 
 	i = 0;
-	if (nember < 0)
+	if (n < 0)
 		i++;
-	while (nember != 0)
+	if (!n)
+		return (1);
+	while (n != 0)
 	{
-		nember /= 10;
 		i++;
+		n /= 10;
 	}
 	return (i);
 }
 
-int	ft_putnbr(int nb)
+int	ft_putnbr(int n)
 {
-	long	n;
+	long	nb;
 
-	n = (long)nb;
-	if (n < 0)
+	nb = (long)n;
+	if (nb < 0)
 	{
 		ft_putchar('-');
-		n = nb * -1;
+		nb = nb * -1;
 	}
-	if (n < 10)
+	if (nb < 10)
 	{
-		ft_putchar(n + 48);
+		ft_putchar(nb + 48);
 	}
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
 	}
-	return (contsize(nb));
+	return (countsize(n));
 }

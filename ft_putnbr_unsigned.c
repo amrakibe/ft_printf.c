@@ -6,18 +6,18 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 20:48:00 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/08 23:40:17 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/09 00:15:18 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	contsize(int number)
+static int	contsize(unsigned int number)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	if (number < 0)
+	if (number <= 0)
 		i++;
 	while (number != 0)
 	{
@@ -27,7 +27,7 @@ static int	contsize(int number)
 	return (i);
 }
 
-int	ft_putnbr_unsigned(int nb)
+int	ft_putnbr_unsigned(unsigned int nb)
 {
 	long	n;
 
