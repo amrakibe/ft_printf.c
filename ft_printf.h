@@ -6,14 +6,14 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 13:34:49 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/09 01:57:42 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/09 16:05:42 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <unistd.h>
-// # include <stdio.h>
+# include <stdio.h>
 # include <stdarg.h>
 
 # define LOWER	"0123456789abcdef"

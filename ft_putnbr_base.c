@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 18:17:44 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/09 00:18:25 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:06:37 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,3 @@ int	ft_putnbr_base(long nb, char *base)
 	}
 	return (base_size(nb));
 }
-/*
-int main()
-{
-	printf("\n%d\n", ft_putnbr_base(23, lowercase));
-}*/

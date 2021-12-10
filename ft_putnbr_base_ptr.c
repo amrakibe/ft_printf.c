@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 13:48:50 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/09 00:04:12 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:06:20 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,3 @@ int	ft_putnbr_base_ptr(unsigned long nb, char *base)
 	}
 	return (calculate_length_ptr(nb));
 }
-
-// int main()
-// {
-// 	printf("\n%d\n", ft_putnbr_base_ptr('a', LOWER));
-// }

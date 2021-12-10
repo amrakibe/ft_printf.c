@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 20:48:00 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/09 00:15:18 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:06:42 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,3 @@ int	ft_putnbr_unsigned(unsigned int nb)
 	}
 	return (contsize(nb));
 }
-/*
-int main()
-{
-	printf("\n%d\n", ft_putnbr_unsigned(54));
-}*/

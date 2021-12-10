@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:21:32 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/09 15:18:03 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/10 14:08:46 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,16 @@ int	ft_printf(const char *forma, ...)
 	va_end(list);
 	return (lenght);
 }
-// int main()
-// {
-// 	ft_printf("%c", 'a');
-// 	ft_printf("\n%s", "hello");
-// 	ft_printf("\n%p", 655664);
-// 	ft_printf("%d", 1234567890);
-// 	ft_printf("\n%i", 55);
-// 	ft_printf("\n%u", 9876);
-// 	ft_printf("\n%x", 5678);
-// 	ft_printf("\n%X", 77676);
-// 	ft_printf("\n%%\n");
-// }
+
+int	main(void)
+{
+	ft_printf("%c", 'a');
+	ft_printf("\n%s", "hello");
+	ft_printf("\n%p", 655664);
+	ft_printf("%d", 1234567890);
+	ft_printf("\n%i", 55);
+	ft_printf("\n%u", 9876);
+	ft_printf("\n%x", 5678);
+	ft_printf("\n%X", 77676);
+	ft_printf("\n%%\n");
+}
