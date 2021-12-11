@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 12:58:41 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/09 01:57:27 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/10 21:55:50 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ static	int	countsize(int n)
 		return (1);
 	while (n != 0)
 	{
-		i++;
 		n /= 10;
+		i++;
 	}
 	return (i);
 }

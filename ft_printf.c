@@ -6,13 +6,13 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:21:32 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/10 14:08:46 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/11 15:26:41 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	print_printf(char format, const void *value, int *len)
+static void	Check_print(char format, const void *value, int *len)
 {
 	if (format == 's')
 		*len += ft_putstr((char *)value);
@@ -51,7 +51,7 @@ int	ft_printf(const char *forma, ...)
 			forma++;
 			if (*forma != '%')
 				to_next = va_arg(list, void *);
-			print_printf(*forma, to_next, &lenght);
+			Check_print(*forma, to_next, &lenght);
 		}
 		else
 			lenght += ft_putchar(*forma);
@@ -59,17 +59,4 @@ int	ft_printf(const char *forma, ...)
 	}
 	va_end(list);
 	return (lenght);
-}
-
-int	main(void)
-{
-	ft_printf("%c", 'a');
-	ft_printf("\n%s", "hello");
-	ft_printf("\n%p", 655664);
-	ft_printf("%d", 1234567890);
-	ft_printf("\n%i", 55);
-	ft_printf("\n%u", 9876);
-	ft_printf("\n%x", 5678);
-	ft_printf("\n%X", 77676);
-	ft_printf("\n%%\n");
 }

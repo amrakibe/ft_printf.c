@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/07 13:48:50 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/10 14:06:20 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/11 15:26:56 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ static int	calculate_length_ptr(unsigned long nb)
 		i++;
 	while (nb > 0)
 	{
-		i++;
 		nb /= 16;
+		i++;
 	}
 	return (i);
 }

@@ -6,7 +6,7 @@
 #    By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/06 23:29:48 by amrakibe          #+#    #+#              #
-#    Updated: 2021/12/08 23:34:19 by amrakibe         ###   ########.fr        #
+#    Updated: 2021/12/10 22:42:54 by amrakibe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS = 	ft_printf.c \
 	   
 OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJS) $(LIBFT)
+$(NAME): $(OBJS) $(PRINTF)
 		ar rc $(NAME) $(OBJS)
 
 %.o:%.c
@@ -33,10 +33,10 @@ $(NAME): $(OBJS) $(LIBFT)
 
 all: $(NAME)
 clean:
-	rm -f $(OBJS)
+	rm -rf $(OBJS)
 
 fclean:	clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 
 re:	fclean all
 
