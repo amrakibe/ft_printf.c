@@ -6,13 +6,13 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:21:32 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/11 15:26:41 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/12 15:23:13 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	Check_print(char format, const void *value, int *len)
+static void	check_print(char format, const void *value, int *len)
 {
 	if (format == 's')
 		*len += ft_putstr((char *)value);
@@ -51,7 +51,7 @@ int	ft_printf(const char *forma, ...)
 			forma++;
 			if (*forma != '%')
 				to_next = va_arg(list, void *);
-			Check_print(*forma, to_next, &lenght);
+			check_print(*forma, to_next, &lenght);
 		}
 		else
 			lenght += ft_putchar(*forma);
