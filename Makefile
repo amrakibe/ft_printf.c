@@ -6,7 +6,7 @@
 #    By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/06 23:29:48 by amrakibe          #+#    #+#              #
-#    Updated: 2021/12/10 22:42:54 by amrakibe         ###   ########.fr        #
+#    Updated: 2021/12/16 19:10:26 by amrakibe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,9 @@ SRCS = 	ft_printf.c \
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS) $(PRINTF)
-		ar rc $(NAME) $(OBJS)
+		ar rc  $(NAME) $(OBJS)
 
-%.o:%.c
+%.o:%.c $(PRINTF)
 	cc $(FLAGS) -c $< -o $@
 
 all: $(NAME)
@@ -40,4 +40,4 @@ fclean:	clean
 
 re:	fclean all
 
-.PHONY: all clean fclean re 
+.PHONY: all clean fclean re

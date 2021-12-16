@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 16:21:32 by amrakibe          #+#    #+#             */
-/*   Updated: 2021/12/12 15:23:13 by amrakibe         ###   ########.fr       */
+/*   Updated: 2021/12/16 19:11:21 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,9 @@ int	ft_printf(const char *forma, ...)
 	}
 	va_end(list);
 	return (lenght);
+}
+int main()
+{
+	ft_printf("%%", "jkhjkhjk");
+	printf("%%", "jkhjkhjk");
 }
